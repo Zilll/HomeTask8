@@ -28,11 +28,12 @@ public class Lesson1HW {
         Square = Width*Height;
         System.out.println("Square is " + Square);
         //Task4
-        double a = 5;
+        int a = 5;
         double b = 10;
         double result = a/b;
-        System.out.println(result);
+        System.out.println("result is:" +result);
         //Task5
+//        C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2018.2.7/plugins/maven/lib/maven3
         int a2 = 1;
         int b2 = 3;
         int c2 = 9;

@@ -12,11 +12,10 @@ public static void main(String[] args) {
 }
 	public static int getEvenDigitSum(int num){
 		int sum=0;
-
-		while(num>0)
+		while(num>0 && num%2==0)
 		{
 			sum+=num%10;
-			num/=10;
+			num=num/10;
 		}
 		while (num<0){
 			System.out.println("Wrong digit was entered");
