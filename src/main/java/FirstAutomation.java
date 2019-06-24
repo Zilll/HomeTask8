@@ -28,8 +28,7 @@ public class FirstAutomation {
         driver.findElement( By.xpath( "//*[@id=\"phone_mobile\"]" ) ).sendKeys( "4747474747");
         driver.findElement( By.xpath( "//*[@id=\"submitAccount\"]" ) ).click();
         String bodyText = driver.findElement(By.tagName("body")).getText();
-
-        if ( bodyText.contains( "There is 2 error" ) ) {
+        if ( bodyText.contains( "There is 1 error" ) ) {
             System.out.println("test is ok" );
             driver.quit();
         }
