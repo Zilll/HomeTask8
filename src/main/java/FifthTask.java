@@ -1,31 +1,46 @@
-public class FifthTask {
-public static void main(String[] args) {
-	int a = min(2,2);
-	int a2=min(3,1,5,6);
-	int gg = Math.min(a,a2);
-
-	System.out.println(gg);
-}
-public static int min(int a, int b, int c, int d) {
-	int val;
-	if (a < b || a<c || a<d){
-		val = a;
-	} else
-		val = b;
-	return val;
-}
-	public static int min ( int a, int b){
-		int val;
-		if (a < b){
-			val = a;
-		} else
-			val = b;
-		return val;
-	}
-}
-
-
-
-
-
-
+//public class FifthTask {
+//	public static void main(String[] args) {
+//
+//	}
+//	public static int min(int a, int b, int c, int d) {
+//
+//		int val2;
+//		int val3;
+//		if (c < d) {
+//			val2 = c;
+//		}
+//		if (c > d) {
+//			val2 = d;
+//		}
+////		if (val1 < val2){
+////			val3 = val1;
+////		}
+////		if (val1>val2){
+////			val3 = val2;
+////		}
+////		return val3;
+////	}
+//		//return val;
+////	}
+////		public static int min(int a, int b){
+////			int val1;
+////			if (a < b) {
+////				val1 = a;
+////				return val1;
+////			}
+////			if (a > b) {
+////				val1 = b;
+////				return val1;
+////			}
+////			//return val1;
+////		//}
+////	//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
