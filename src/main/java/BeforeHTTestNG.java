@@ -1,13 +1,25 @@
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 public class BeforeHTTestNG {
     public WebDriver driver;
+    @DataProvider(name="SearchSomething")
+    public Object[][] getData() {
+        return new Object[][] {
+        {"Blouse"},
+        {"Штаны какие-то"},
+        {"T-Shirt"}
+        };
+    }
+
     @BeforeClass
     public void setup() {
     System.setProperty("webdriver.chrome.driver", "C:\\Drivertest\\chromedriver.exe");
@@ -15,6 +27,7 @@ public class BeforeHTTestNG {
     driver.get("http://www.automationpractice.com");
     driver.findElement( By.id( "search_query_top" ) ).click( );
     }
+
     @Test(priority = 1)
     public void GoToRegister() throws InterruptedException {
         Thread.sleep(5000);  // Let the user actually see something!
@@ -45,12 +58,15 @@ public class BeforeHTTestNG {
         driver.findElement( By.xpath( "//*[@id=\"phone_mobile\"]" ) ).sendKeys( "4747474747");
         driver.findElement( By.xpath( "//*[@id=\"submitAccount\"]" ) ).click();
     }
-    @Test(priority = 3)
-    public void SearchBlouse() throws InterruptedException {
+    @Test(priority = 3,dataProvider="SearchSomething")
+    public void SearchBlouse(String Odegda) throws InterruptedException {
         Thread.sleep( 3000 );
         driver.findElement( By.id( "search_query_top" ) ).click( );
-        driver.findElement( By.id( "search_query_top" ) ).sendKeys("Blouse" );
+        WebElement SearchThing = driver.findElement( By.id( "search_query_top" ) );
+        SearchThing.sendKeys(Odegda);
         driver.findElement( By.id( "search_query_top" ) ).submit();
+        driver.findElement( By.id( "search_query_top" ) ).click( );
+        SearchThing.clear();
     }
     @Test(priority = 4)
     public void LogOut(){
