@@ -1,10 +1,9 @@
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class TestHT10 extends BeforeAfterHT10 {
     //static WebDriver driver;
@@ -40,3 +39,4 @@ public class TestHT10 extends BeforeAfterHT10 {
         Assert.assertEquals( "Your shopping cart is empty.",PageElementsHT10.emptyRecycle() );
     }
 }
+

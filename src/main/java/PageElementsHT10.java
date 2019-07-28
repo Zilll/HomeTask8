@@ -65,6 +65,7 @@ public class PageElementsHT10 {
 
     }
 
+
 //        Assert.assertEquals( "$54.00",PageElementsHT10.totalProdPrice );
 //        Assert.assertEquals( "$54.00",totalProd );
 //        Assert.assertEquals( "$2.00",totalShiping );
